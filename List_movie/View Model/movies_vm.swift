@@ -290,10 +290,10 @@ class MovieVM: ObservableObject {
 //            decoder.keyDecodingStrategy = .convertFromSnakeCase
             let decodednowPlay = try decoder.decode([NowPlayingElement].self, from: json)
             nowPlayData = decodednowPlay
-            print("ini \(decodednowPlay)")
         } catch {
             print(error)
         
         }
     }
+    
 }
