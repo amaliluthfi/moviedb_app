@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct List_movieApp: App {
-    @StateObject var movieController = MovieVM()
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

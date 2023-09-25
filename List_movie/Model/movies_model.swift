@@ -5,13 +5,33 @@
 
 import Foundation
 
-// MARK: - NowPlayingElement
-struct NowPlayingElement: Codable {
+// MARK: - NowPlaying
+struct NowPlaying: Codable {
+    let dates: Dates?
+    let page: Int
+    let results: [Result]
+    let totalPages, totalResults: Int
+
+    enum CodingKeys: String, CodingKey {
+        case dates, page, results
+        case totalPages
+        case totalResults
+    }
+}
+
+// MARK: - Dates
+struct Dates: Codable {
+    let maximum, minimum: String
+}
+
+// MARK: - Result
+struct Result: Codable {
     let adult: Bool
     let backdropPath: String
-    let genreIDS: [Int]
+    let genreIds: [Int]
     let id: Int
-    let originalLanguage, originalTitle, overview: String
+    let originalLanguage: String
+    let originalTitle, overview: String
     let popularity: Double
     let posterPath, releaseDate, title: String
     let video: Bool
@@ -20,22 +40,16 @@ struct NowPlayingElement: Codable {
 
     enum CodingKeys: String, CodingKey {
         case adult
-        case backdropPath = "backdrop_path"
-        case genreIDS = "genre_ids"
+        case backdropPath
+        case genreIds
         case id
-        case originalLanguage = "original_language"
-        case originalTitle = "original_title"
+        case originalLanguage
+        case originalTitle
         case overview, popularity
-        case posterPath = "poster_path"
-        case releaseDate = "release_date"
+        case posterPath
+        case releaseDate
         case title, video
-        case voteAverage = "vote_average"
-        case voteCount = "vote_count"
+        case voteAverage
+        case voteCount
     }
 }
-
-typealias NowPlaying = [NowPlayingElement]
-
-
-
-
