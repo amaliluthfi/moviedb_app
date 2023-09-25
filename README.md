@@ -1,2 +1,2 @@
 # moviedb_app
-moviedb app
+Movie list app from Moviedb API made by swift
