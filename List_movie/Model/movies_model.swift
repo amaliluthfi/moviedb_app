@@ -9,7 +9,7 @@ import Foundation
 struct NowPlaying: Codable {
     let dates: Dates?
     let page: Int
-    let results: [Result]
+    var results: [Result]
     let totalPages, totalResults: Int
 
     enum CodingKeys: String, CodingKey {
@@ -26,17 +26,18 @@ struct Dates: Codable {
 
 // MARK: - Result
 struct Result: Codable {
-    let adult: Bool
-    let backdropPath: String
+    let adult: Bool?
+    let backdropPath: String?
     let genreIds: [Int]
     let id: Int
-    let originalLanguage: String
-    let originalTitle, overview: String
-    let popularity: Double
-    let posterPath, releaseDate, title: String
-    let video: Bool
-    let voteAverage: Double
-    let voteCount: Int
+    let originalLanguage: String?
+    let originalTitle, overview: String?
+    let popularity: Double?
+    let posterPath: String?
+    let releaseDate, title: String?
+    let video: Bool?
+    let voteAverage: Double?
+    let voteCount: Int?
 
     enum CodingKeys: String, CodingKey {
         case adult

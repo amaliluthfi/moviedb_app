@@ -27,7 +27,6 @@ struct DetailView: View {
     }
     
     var body: some View {
-        NavigationView{
             Color(UIColor(red: 49/255, green: 29/255, blue: 63/255, alpha: 1.0))
                 .ignoresSafeArea()
                 .overlay{
@@ -93,4 +92,3 @@ struct DetailView: View {
                 }
         }
     }
-}
