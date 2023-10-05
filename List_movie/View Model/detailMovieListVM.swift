@@ -61,41 +61,41 @@ class DetailMovieListVM: ObservableObject{
         let path: String = "/movie/\(category)"
         
         let headers = [
-          "accept": "application/json",
-          "Authorization": "Bearer \(Self.apiKey)"
+            "accept": "application/json",
+            "Authorization": "Bearer \(Self.apiKey)"
         ]
-
+        
         let request = NSMutableURLRequest(url: NSURL(string: Self.url + path + "?page=" + String(Self.page))! as URL,
-                                                cachePolicy: .useProtocolCachePolicy,
-                                            timeoutInterval: 10.0)
+                                          cachePolicy: .useProtocolCachePolicy,
+                                          timeoutInterval: 10.0)
         request.httpMethod = "GET"
         request.allHTTPHeaderFields = headers
-
+        
         let session = URLSession.shared
         let dataTask = session.dataTask(with: request as URLRequest, completionHandler: { (data, response, error) -> Void in
-          if (error != nil) {
-            print(error as Any)
-          } else {
-            let httpResponse = response as? HTTPURLResponse
-              if(httpResponse?.statusCode == 200){
-                  if let data = data {
-                      DispatchQueue.main.async {
-                          do{
-                              let decoder = JSONDecoder()
-                              decoder.keyDecodingStrategy = .convertFromSnakeCase
-                              
-                              let listData = try decoder.decode(NowPlaying.self, from: data)
-                              self.movieList.results.append(contentsOf: listData.results)
-                              
-                          } catch let error {
-                              print("Error decoding: ", error)
-                          }
-                      }
-                  }
-              }
-          }
+            if (error != nil) {
+                print(error as Any)
+            } else {
+                let httpResponse = response as? HTTPURLResponse
+                if(httpResponse?.statusCode == 200){
+                    if let data = data {
+                        DispatchQueue.main.async {
+                            do{
+                                let decoder = JSONDecoder()
+                                decoder.keyDecodingStrategy = .convertFromSnakeCase
+                                
+                                let listData = try decoder.decode(NowPlaying.self, from: data)
+                                self.movieList.results.append(contentsOf: listData.results)
+                                
+                            } catch let error {
+                                print("Error decoding: ", error)
+                            }
+                        }
+                    }
+                }
+            }
         })
-
+        
         dataTask.resume()
         
         Self.page += 1

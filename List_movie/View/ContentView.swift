@@ -12,7 +12,7 @@ struct ContentView: View {
                     VStack(alignment: .leading){
                         if !controller.nowPlayData.results.isEmpty {
                             ZStack(alignment:.bottomLeading){
-
+                                
                                 TabView(selection: $selectedTab) {
                                     
                                     AsyncImage(url: URL(string: controller.imgUrl + (controller.nowPlayData.results[0].backdropPath ?? "")), scale: 3).frame(minWidth: .infinity).scaledToFit().tag(0)
@@ -46,13 +46,13 @@ struct ContentView: View {
                             NavigationLink(destination: DetailMovieList(category: "now_playing")){
                                 HStack(alignment: .center){
                                     Text("See more")
-                                            .foregroundColor(Color.white)
-                                            .font(.headline)
-                                Image(systemName: "chevron.forward.circle").foregroundColor(Color.white)
+                                        .foregroundColor(Color.white)
+                                        .font(.headline)
+                                    Image(systemName: "chevron.forward.circle").foregroundColor(Color.white)
                                 }.padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                                 
                             }
-                               
+                            
                         }
                         ScrollView(.horizontal, showsIndicators: false){
                             HStack(alignment: .top, spacing: 15){
@@ -73,13 +73,13 @@ struct ContentView: View {
                             NavigationLink(destination: DetailMovieList(category: "popular")){
                                 HStack(alignment: .center){
                                     Text("See more")
-                                            .foregroundColor(Color.white)
-                                            .font(.headline)
-                                Image(systemName: "chevron.forward.circle").foregroundColor(Color.white)
+                                        .foregroundColor(Color.white)
+                                        .font(.headline)
+                                    Image(systemName: "chevron.forward.circle").foregroundColor(Color.white)
                                 }.padding(EdgeInsets(top: 0, leading: 8, bottom: 0, trailing: 8))
                                 
                             }
-                               
+                            
                         }
                         ScrollView(.horizontal, showsIndicators: false){
                             

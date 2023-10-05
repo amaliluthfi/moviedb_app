@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271F0FCE2ACD455E00B5E4D6 /* credist_model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271F0FCD2ACD455E00B5E4D6 /* credist_model.swift */; };
 		272095FA2A1E02F800C17EBA /* List_movieApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272095F92A1E02F800C17EBA /* List_movieApp.swift */; };
 		272095FC2A1E02F800C17EBA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 272095FB2A1E02F800C17EBA /* ContentView.swift */; };
 		272095FE2A1E02FC00C17EBA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 272095FD2A1E02FC00C17EBA /* Assets.xcassets */; };
@@ -21,6 +22,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		271F0FCD2ACD455E00B5E4D6 /* credist_model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = credist_model.swift; sourceTree = "<group>"; };
 		272095F62A1E02F800C17EBA /* List_movie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = List_movie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		272095F92A1E02F800C17EBA /* List_movieApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = List_movieApp.swift; sourceTree = "<group>"; };
 		272095FB2A1E02F800C17EBA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			children = (
 				27F8DFE42A2DDF6F008D983A /* movies_model.swift */,
 				27C13F8E2A653BEB00AEB8CC /* detail_movie_model.swift */,
+				271F0FCD2ACD455E00B5E4D6 /* credist_model.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -186,6 +189,7 @@
 			files = (
 				27C1959B2AC6DD37005B3CA1 /* detailMovieListVM.swift in Sources */,
 				27C13F8F2A653BEB00AEB8CC /* detail_movie_model.swift in Sources */,
+				271F0FCE2ACD455E00B5E4D6 /* credist_model.swift in Sources */,
 				27F8DFE72A2E3DE7008D983A /* movies_vm.swift in Sources */,
 				272095FC2A1E02F800C17EBA /* ContentView.swift in Sources */,
 				272095FA2A1E02F800C17EBA /* List_movieApp.swift in Sources */,
