@@ -1,2 +1,5 @@
 # moviedb_app
-Movie list app from Moviedb API made using SwiftUI
+Movie list app from The Moviedb API made using SwiftUI
+
+https://developer.themoviedb.org/
+
